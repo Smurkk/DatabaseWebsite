@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Real Estate Query System</title>
+   </head>
+   <body>
+      <h1>Query the Real Estate Database</h1>
+
+      <form method="post" action="updated_database.php">
+         <h2>Display All Listings</h2>
+         <button type="submit" name="action" value="all_listings">Show All Listings</button>
+      </form>
+
+      <form method="post" action="updated_database.php">
+         <h2>Search Houses</h2>
+         <label>Min Price:</label>
+         <input type="number" name="min_price" required><br>
+         <label>Max Price:</label>
+         <input type="number" name="max_price" required><br>
+         <label>Bedrooms:</label>
+         <input type="number" name="bedrooms" required><br>
+         <label>Bathrooms:</label>
+         <input type="number" name="bathrooms" required><br>
+         <button type="submit" name="action" value="filter_houses">Search Houses</button>
+      </form>
+
+      <form method="post" action="updated_database.php">
+         <h2>Search Business Properties</h2>
+         <label>Min Price:</label>
+         <input type="number" name="min_price" required><br>
+         <label>Max Price:</label>
+         <input type="number" name="max_price" required><br>
+         <label>Min Size (sqft):</label>
+         <input type="number" name="min_size" required><br>
+         <label>Max Size (sqft):</label>
+         <input type="number" name="max_size" required><br>
+         <button type="submit" name="action" value="filter_business">Search Business Properties</button>
+      </form>
+
+      <form method="post" action="updated_database.php">
+         <h2>Display All Agents</h2>
+         <button type="submit" name="action" value="all_agents">Show Agents</button>
+      </form>
+
+      <form method="post" action="updated_database.php">
+         <h2>Display All Buyers</h2>
+         <button type="submit" name="action" value="all_buyers">Show Buyers</button>
+      </form>
+
+      <form method="post" action="updated_database.php">
+         <h2>Custom Query</h2>
+         <label>Enter SQL Query:</label><br>
+         <textarea name="custom_query" rows="5" cols="50" required></textarea><br>
+         <button type="submit" name="action" value="custom_query">Execute Query</button>
+      </form>
+   </body>
+</html>
